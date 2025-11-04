@@ -1,0 +1,37 @@
+@import 'variables';
+
+.header {
+  background-color: $dark-color;
+  padding: $spacing-unit 0;
+  color: $light-color;
+
+  .navbar {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-text-wrapper {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: $light-color;
+
+      img {
+        height: 40px;
+        margin-right: $spacing-unit;
+      }
+
+      .head {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+
+    .online-status {
+      font-size: 1rem;
+      color: $success-color;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@import 'variables';
+
+.home {
+  flex: 1;
+  position: relative;
+
+  .hero_area {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    &.blur {
+      filter: blur(5px);
+    }
+  }
+
+  .hero-section {
+    flex: 1;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+
+    .hero-content {
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+
+        .cs {
+          color: $primary-color;
+        }
+      }
+
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .start-chat-btn {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+
+    .hero-image {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    .wrap {
+      margin-bottom: 1rem;
+
+      input[type="checkbox"] {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .tc {
+      margin: 1rem 0;
+      padding: 1rem;
+      background-color: $light-color;
+      border-radius: 4px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .submit-btn {
+      margin-top: 1rem;
+      text-align: center;
+
+      button {
+        padding: 0.75rem 2rem;
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+
+  .features-section {
+    padding: 4rem 0;
+    background-color: white;
+  }
+}
+
+// Responsive styles
+@include responsive($breakpoint-md) {
+  .hero-section {
+    .row {
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
